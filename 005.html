@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Object 오브젝트
+        let person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 40,
+            tel: "010123456789",
+            email: "aaa@mail.com"
+        };
+
+        // 값 추가
+        person.address = "Seoul";
+
+        console.log(person.address);
+
+        console.log(person);
+        console.log(person.firstName);
+        console.log(person.lastName);
+        console.log(person.age);
+        console.log(person.tel);
+
+
+        // 값 변경
+        person.age = 20;
+
+
+        // 값 불러오기
+        // 1.
+        console.log(person.age);
+
+        // 2. 
+        console.log(person["firstName"]);
+
+
+
+        // 
+        let firstNameKey = "firstName";
+
+        // key값이 있는지만 확인됨. 
+        // console.log(person.firstNameKey)에서 firstNameKey는 변수가 아님. 변수가 들어갈 수 없음.
+        console.log(person.firstNameKey);
+        // "firstNameKey"라는 문자열의 데이터 값을 접근하여 알려줌.
+        console.log(person[firstNameKey]);
+
+        let Age = "age";
+        console.log(person.Age);
+        console.log(person[Age]);
+    </script>
+</body>
+
+</html>
