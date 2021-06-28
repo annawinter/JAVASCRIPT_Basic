@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var points = [34, 12, 45, 22, 6, 8, 2, 54];
+
+        var output = points.filter(function (p) {
+            return p > 20;
+        });
+
+        function filter(arr, func) {
+            for (var a of arr) {
+                if (func(a)) {
+                    output.push(a);
+                }
+            }
+            return output;
+        }
+
+
+
+        // function filter() {
+        //     var outputList = [];
+        //     for (var p of points) {
+        //         if (p > 20) {
+        //             outputList.push(p);
+        //         }
+        //     }
+
+        //     return outputList;
+        // }
+    </script>
+</body>
+
+</html>
