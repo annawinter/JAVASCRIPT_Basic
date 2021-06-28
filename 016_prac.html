@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script src="user_data.js"></script> -->
+    <script>
+        //문제1. userList의 데이터에서 gender가 male인 사람만
+        //새 배열 maleUserList에 담고 console 창에 출력하세요.
+
+        // var maleUserList = [];
+
+        // for (var user of userList) {
+        //     if (user.gender == "male") {
+        //         maleUserList.push(user)
+        //     }
+        // }
+        // console.log(maleUserList);
+        // console.table(maleUserList);
+
+        // 방법2
+        // console.table(userList.filter(u => u.gender == "male"));
+
+
+        //추가 연습1
+
+        // var femaleUserList = [];
+
+        // for (var user2 of userList) {
+        //     if (user2.gender == "female") {
+        //         femaleUserList.push(user2)
+        //     }
+        // }
+        // console.log(femaleUserList);
+
+
+        //추가 연습2
+        // var young = [];
+
+        // for (var age_20 of userList) {
+        //     if (age_20.age < 30) {
+        //         young.push(age_20)
+        //     }
+        // }
+
+        // console.table(young);
+
+
+        // 추가 연습3
+        // var young2 = [];
+
+        // for (var age_30 of userList) {
+        //     if (age_30.age > 30 && age_30.age < 40) {
+        //         young2.push(age_30)
+        //     }
+        // }
+        // console.table(young2);
+
+
+        // 추가 연습4
+
+
+        // 문제2
+        // 음료자판기 문제. productList에서 
+        //inputCoin으로 구매할 수 있는 음료 목록을 출력하세요.
+        var productList = [{
+                name: "솔의눈",
+                price: 700
+            },
+            {
+                name: "커피",
+                price: 700
+            },
+            {
+                name: "파워레이드",
+                price: 1200
+            },
+            {
+                name: "오렌지",
+                price: 1000
+            },
+            {
+                name: "보리차",
+                price: 1200
+            },
+            {
+                name: "밀키스",
+                price: 800
+            }
+        ];
+
+
+        // for-of 사용 예시
+        var possible = [];
+        var inputCoin = 1000;
+
+        for (var product of productList) {
+            if (product.price <= inputCoin) {
+                possible.push(product);
+            }
+        }
+
+        console.table(possible);
+
+
+
+
+        // for-in 사용 예시
+        // console.log(productList[0]);
+
+        // var inputCoin = 800;
+
+        // //
+        // var possible = [];
+
+        // for (var index in productList) {
+        //     if (productList[index].price <= inputCoin) {
+        //         possible.push(productList[index]);
+        //     }
+        // }
+
+        // console.table(possible);
+
+
+        // 배열
+        // var arr = ["a", "b", "c"];
+        // arr[0]
+    </script>
+</body>
+
+</html>
