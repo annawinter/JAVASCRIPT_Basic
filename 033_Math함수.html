@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Math 객체
+
+        // round() - 파라미터로 전달받은 숫자형 데이터를 '반올림' 처리함.
+        console.log(Math.round(4.9)); // 5
+        console.log(Math.round(4.1)); // 4
+        console.log(Math.round(-4.2)); // -4
+
+        // ceil() - 파라미터로 전달받은 숫자형 데이터를 '무조건 올림' 처리해서 정수를 만듦.
+        console.log(Math.ceil(4.4)); // 5
+
+        // floor() - 무조건 내림
+        console.log(Math.floor(4.9)); // 4
+
+        // trunc() - 무조건 정수 부분만 반환(소수점 버림)
+        console.log(Math.trunc(4.9)); // 4
+
+        // sign() - 0보다 크면 무조건 '1', 0보다 작으면 무조건 '-1'
+        console.log(Math.sign(23));
+        console.log(Math.sign(-23));
+
+        // pow() - 제곱
+        console.log(Math.pow(8, 2)); // 8의 2제곱
+
+        // sqrt() - 루트값
+        console.log(Math.sqrt(64)); // 64의 루트값 = 8
+
+        // abs() - 절대값
+        console.log(Math.abs(-4.7)) // 4.7
+
+        // min(), max()
+        console.log(Math.min(2, 23, 12, 45, 33, 5533)); // 최소값
+        console.log(Math.max(2, 23, 12, 45, 33, 5533)); // 최대값
+
+        // random() - 랜덤수(무작위 수), 실행할 때마다 무작위 숫자형 데이터가 나옴. 0 < 랜덤수 < 1
+        console.log(Math.random()); // 0 < 랜덤수 < 1 
+        console.log(Math.floor(Math.random() * 10)); // 1~9사이
+        console.log(Math.floor(Math.random() * 10) + 1); // 2~10사이
+        console.log(Math.floor(Math.random() * 100) + 1); // 101~ 999사이
+
+        // 특정수 ~ 특정수 사이의 랜덤값
+        function getRandomInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log(getRandomInteger(15, 30));
+
+        // 예제
+        // 가위 바위 보 게임 함수 만들기
+        // 함수명 - rspPlayer
+        // 파라미터 1개 - "가위", "바위", "보"
+        // 힌트 : const arrRsp = ["가위","바위","보"];
+        // return - {userRsp:"", playerRsp:"", winner:true/false}
+    </script>
+</body>
+
+</html>
