@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="user_data.js"></script>
+
+    <script>
+        // function genderAgeList(gender, age) {
+        //     var outputList = [];
+        //     for (var user of userList) {
+        //         if (user.gender == gender && user.age == age) {
+        //             outputList.push(user);
+        //         }
+        //     }
+        //     return outputList;
+        // }
+
+        // let maleUserList = genderAgeList("male", 30);
+        // console.table(maleUserList);
+
+
+        // 25세~35세 
+        // function genderAgeList(gender, fromAge, toAge) {
+        //     var outputList = [];
+        //     for (var user of userList) {
+        //         if (user.gender == gender && (user.age >= fromAge && user.age <= toAge)) {
+        //             outputList.push(user);
+        //         }
+        //     }
+        //     return outputList;
+        // }
+
+        // let maleUserList = genderAgeList("male", 25, 35);
+        // console.table(maleUserList);
+
+        // let femaleUserList = genderAgeList("female", 25, 35);
+        // console.table(femaleUserList);
+
+
+
+        // 25세 이하 이거나 35세 이상
+        // function genderAgeList(gender, fromAge, toAge) {
+        //     var outputList = [];
+        //     for (var user of userList) {
+        //         if (user.gender == gender && (user.age <= fromAge || user.age >= toAge)) {
+        //             outputList.push(user);
+        //         }
+        //     }
+        //     return outputList;
+        // }
+
+        // let maleUserList = genderAgeList("male", 25, 35);
+        // console.table(maleUserList);
+
+        // let femaleUserList = genderAgeList("female", 25, 35);
+        // console.table(femaleUserList);
+
+
+
+
+        // for-loop
+        // 문제. 배열안에 배열. for-loop
+        // 함수
+        // 함수명 - printArray
+        // 파라미터 - 배열
+        // 출력 - console.log
+
+        // var arr = [
+        //     [1, 2, 3, 4, 5],
+        //     [3, 12, 33, 24, 15],
+        //     [4, 7, 12, 3, 9],
+        //     [12, 32, 56, 23, 90],
+        //     [5, 9, 7, 21, 19],
+        //     [5, 9, 7, 21, 19]
+        // ];
+
+        // //var arr2D = arr;
+
+        // printArray(arr);
+
+        // function printArray(arr2D) {
+        //     let len1 = arr2D.length; // 6
+
+        //     for (let i = 0; i < len1; i++) {
+        //         // arr2D[i] // [1,2,3,4,5]
+        //         let len2 = arr2D[i].length; //5,
+        //         for (let j = 0; j < len2; j++) {
+        //             console.log(arr2D[i][j]);
+        //         }
+        //     }
+        // }
+
+
+
+        // 나이 총합
+        // 나이 평균
+        // 제일 많은
+        // 제일 적은
+
+        // 나이총합 - getUserAgeSum
+        // 나이평균 - getUserAgeAvg
+        // 나이 제일 많은 - getUserAgeMax
+        // 나이 제일 적은 - getUserAgeMin
+
+        // getUserAgeSum(total);
+        // getUserAgeAvg(avg);
+        // getUserAgeMax(max);
+        // getUserAgeMin(min);
+
+        // function getUserAgeSum() {
+        //     let total = 0;
+        //     let lenAge = userList.length;
+        //     for (userAge of userList) {
+        //         for (let i = 0; i < lenAge; i++) {
+        //             console.log(userAge[i][4])
+        //             total = total + userAge;
+        //         }
+        //         return total;
+        //     }
+
+
+        // 모범 답안
+        function getUserAgeMath() {
+            let sum = 0;
+            let maxAge = 0;
+            let minAge = Number.MAX_SAFE_INTEGER;
+
+            for (var user of userList) {
+                sum += user.age;
+
+                if (user.age > maxAge) {
+                    maxAge = user.age;
+                }
+
+                if (user.age < minAge) {
+                    minAge = user.age;
+                }
+            }
+
+            let avg = sum / userList.length;
+
+            return {
+                "sum": sum, //"sum" - key의 이름, : sum - 앞에 선언한 변수.
+                "avg": avg,
+                "maxAge": maxAge,
+                "minAge": minAge
+
+
+                // key랑 변수명이 같을때
+                // sum,
+                // avg,
+                // maxAge,
+                // minAge
+            }
+        }
+
+        let userMath = getUserAgeMath();
+        console.table(userMath);
+    </script>
+</body>
+
+</html>
