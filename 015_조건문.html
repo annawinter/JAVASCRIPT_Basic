@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 조건문 - if
+
+        // if (조건식) {
+        //     //코드 선언
+        // }
+
+        var age = 20;
+        var isAdult = false;
+
+        if (age >= 19) {
+            isAdult = true;
+        }
+
+        if (isAdult) {
+            // 성인에 맞는 코드를 실행해
+        } else {
+            //isAdult == false, 무조건 else 블록 코드 실행
+        }
+
+        var age = 60;
+        var isFree = false;
+
+        if (age >= 70) {
+            isFree = true;
+        } else if (age < 8) {
+            isFree = true;
+        }
+
+        // else {
+        //     isFree = false;
+        // }
+
+
+
+        // 이 위치로
+
+        //
+
+        var time;
+        var greeting = "Good Morning!";
+
+        if (time <= 16) {
+            greeting = "Good afternoon!"
+        } else if (time <= 20) {
+            greeting = "Good evening!"
+        } else if (time > 20) {
+            greeting = "Good night!"
+        }
+
+
+        // 조건문 - switch
+
+        var d = new Date();
+        var day = d.getDay();
+        console.log("day", day);
+        var dayName = "";
+
+        // 1. 배열 사용
+        var dayNames = ["일", "월", "화", "수", "목", "금", "토"];
+        console.log(dayNames[day]);
+
+
+        // 2. switch문 사용
+        switch (day) {
+            case 0:
+                dayName = "일요일";
+                break;
+            case 1:
+                dayName = "월요일";
+                break;
+            case 2:
+                dayName = "화요일";
+                break;
+            case 3:
+                dayName = "수요일";
+                break;
+            case 4:
+                dayName = "목요일";
+                break;
+            case 5:
+                dayName = "금요일";
+                break;
+            case 6:
+                dayName = "토요일";
+                break;
+            default:
+                break;
+        }
+
+        console.log("dayName", dayName);
+    </script>
+</body>
+
+</html>
