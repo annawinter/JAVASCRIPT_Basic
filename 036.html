@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button type="button" onclick="deleteItem();">삭제</button>
+    <a href="https://naver.com" target="_blank">Naver</a>
+    <script>
+        // Window 객체 - 전역객체, Global 객체
+        // window.alert("이것은 alert창입니다.");
+        //alert("이것은 alert창입니다."); // 보통 window빼고 사용
+
+        //window.confirm("정말 삭제하시겠습니까?");
+        // if (confirm("정말 삭제하시겠습니까?")) {
+        //     // 삭제 로직
+        // }
+        // confirm 창 - 사용자에게 의사를 물어봄.(yes, no로)
+
+        // var pass = prompt("비밀번호를 입력하세요.");
+        // console.log(pass);
+        // if (pass == null) {
+        //     // 취소 버튼 누른 경우
+        // } else if (pass == "") {
+        //     //
+        // } else if (pass != "") {
+        //     console.log(pass);
+        // }
+
+        // window.open("https://naver.com"); // 새창으로 open함.
+
+        // setTimeout(function () {
+        //     alert("프로그램 실행");
+        // }, 2000); // 2000(2초) 후에 alert창이 뜸.
+        // // 2000 - 2초, 1000 - 1초, 500 - 0.5초
+
+
+        // setInterval(function () {
+        //     console.log("프로그램 실행");
+        // }, 1000); // 1초마다 계속 실행이 됨.
+
+
+        var count = 0;
+
+        var fnc = setInterval(function () {
+            if (count < 5) {
+                console.log("프로그램 실행:" + count);
+                count++;
+            } else {
+                console.log("종료");
+                clearInterval(fnc);
+            }
+        }, 1000);
+
+
+        function deleteItem() {
+            if (confirm("정말 삭제하시겠습니까?")) {
+                // 삭제 로직
+            }
+        }
+    </script>
+</body>
+
+</html>
