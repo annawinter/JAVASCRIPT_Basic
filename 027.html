@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- // momentjs cdn -->
+    <!-- cdn 주소를 가져와서 쓸 수 있음. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        console.log(moment().format("YYYY-MM-DD"));
+        console.log(moment().add(-1, "month").format("YYYY-MM-DD"));
+
+        // Jun 30th 2021
+        console.log(moment().add(2, "day").format("MMM Do YYYY"));
+    </script>
+</body>
+
+</html>
