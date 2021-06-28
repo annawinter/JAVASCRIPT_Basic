@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //반복문 for-loop
+        // var brands = ["애플", "구글", "페이스북", "아마존", "삼성"]
+
+        // console.log(brands[0]);
+        // console.log(brands[1]);
+        // console.log(brands[2]);
+        // console.log(brands[3]);
+        // console.log(brands[4]);
+
+        // 1. for-loop
+
+        // for(코드1; 조건;코드2){
+        //     //코드 블록
+        // }
+
+        // for (var i = 0; i < 5; i++) {
+        //     console.log(brands[i]); // 애플, 구글, 페이스북, 아마존, 삼성
+        // }
+
+        // var length = brands.length;
+
+        // brands.push("인스타");
+
+        // for (var i = 0; i < length; i++) {
+        //     console.log(brands[i]); // 애플, 구글, 페이스북, 아마존, 삼성
+        // }
+
+        // ** 아래는 매번 brands.length를 계산해야하기 때문에 성능적으로 비효율적임.
+        // ** 그러므로, 매번 계산해야하는 brands.length를 변수로 선정하면 좋음.
+
+
+
+        // brands.push("인스타");
+        // for (var i = 0; i < brands.length; i++) {
+        //     console.log(brands[i]); // 애플, 구글, 페이스북, 아마존, 삼성
+        // }
+
+
+
+
+        // 2. for-in
+
+        // 2-1) object
+        // let person = {
+        //     firstName: "John",
+        //     lastName: "Doe",
+        //     age: 40,
+        //     tel: "010123456789",
+        //     email: "aaa@mail.com"
+        // };
+
+        // for (var key in person) {
+        //     //console.log(key);
+        //     console.log(key, person[key]);
+        // }
+
+
+        // 2-2) 배열
+        // var brands = ["애플", "구글", "페이스북", "아마존", "삼성"]
+
+        // for (var index in brands) {
+        //     console.log(brands[index]);
+        // }
+
+
+        // 3. for-of
+
+        var brands = ["애플", "구글", "페이스북", "아마존", "삼성"]
+
+        for (var brand of brands) {
+            console.log(brand);
+        }
+
+        var lang = "JavaScript";
+        for (var c of lang) {
+            console.log(c);
+        }
+    </script>
+</body>
+
+</html>
