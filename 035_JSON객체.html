@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // JSON 객체
+        // JSON - JavaScript Object Notation
+        // 데이터를 주고받는 데이터 포맷 형식
+
+        var productList = [{
+                name: "솔의눈",
+                price: 700
+            },
+            {
+                name: "커피",
+                price: 700
+            },
+            {
+                name: "파워레이드",
+                price: 1200
+            },
+            {
+                name: "오렌지",
+                price: 1000
+            },
+            {
+                name: "보리차",
+                price: 1200
+            },
+            {
+                name: "밀키스",
+                price: 800
+            }
+        ];
+
+        //console.log(productList);
+
+        var jsonString = JSON.stringify(productList); // object가 아닌 문자열로 변형 시켜줌.
+        console.log(jsonString);
+
+        var jsonObject = JSON.parse(jsonString); // object형식으로 변형 시켜줌.
+        console.log(jsonObject);
+    </script>
+</body>
+
+</html>
