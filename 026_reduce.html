@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="user_data.js"></script>
+    <script>
+        // 14. reduce()
+
+        // var total = points.reduce(function (sum, currentValue) {
+        //     return sum + currentValue;
+        // });
+
+        // console.log("total", total);
+
+        // var sum = 0;
+        // for (var p of points) {
+        //     sum += p;
+        // };
+
+        // var output = points.filter(function (p) {
+        //     return p > 20;
+        // });
+
+        // console.table(output);
+
+        // 설명
+        // reduce 
+
+        /*
+         * 4개
+         * 첫번쨰 - total
+         * 두번째 - 배열의 현재 요소
+         * 세번째 - index 번호
+         * 네번째 - 전체 배열
+         */
+
+        // 예시
+        // reduce 파라미터 2개
+        // 첫번쨰 - 우리가 정의한 함수가 들어가고
+        // 두번째 - 초기값
+        // 배열에 숫자만 담겨있으면 초기값 없어도 됨.
+        // 배열에 오브젝트가 담겨있으면 초기값 반드시 설정해야 함.
+        var total = userList.reduce(function (total, user) {
+            return total + user.age;
+        }, 0);
+
+        console.log(total);
+
+        // 예시2
+        var nums = [3, 2, 5, 4, 1, 7];
+        var numstotal = nums.reduce(function (numstotal, value) {
+            return numstotal + value;
+        });
+    </script>
+</body>
+
+</html>
