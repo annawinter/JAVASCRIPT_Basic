@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="user_data.js"></script>
+    <script>
+        // set 객체
+        var arr = [];
+        // var arr = new Array();
+        arr.push(1);
+        arr.push(3);
+
+        var mySet = new Set();
+        mySet.add(1);
+        mySet.add(12);
+        mySet.add(3);
+        mySet.add(3); // set객체는 무조건 유일한 값만 가진다. 같은 값은 안들어감.
+        console.log(mySet.has(3));
+
+        console.log(arr);
+        console.log(mySet);
+
+        // mySet.clear(); // 데이터값 모두 삭제.
+        // mySet.delete(3); // 일부 데이터(3)만 삭제.
+
+
+        // set값의 이용의 예시(속성 : 단일값-유일값)
+
+        var oUser = {};
+        // oUser["female"] = 1;
+
+        // oUser = {
+        //   "female" : 1,
+        //   "male" : 1
+        //}
+
+        // =>
+        // oUser = {
+        //   "female" : 2,
+        //   "male" : 1
+        //}
+
+
+        for (var user of userList) {
+            if (oUser[user.gender]) {
+                oUser[user.gender] += 1;
+            } else {
+                oUser[user.gender] = 1;
+            }
+        }
+
+        console.table(oUser);
+
+
+        // Map
+        var key1 = {
+            "keyname": 2
+        };
+        var key2 = [2, 3, 4, 5];
+
+        var myMap = new Map();
+        myMap.set("female", 1);
+        console.log(myMap.get("female"));
+        myMap.has("female");
+
+
+        for (var user of userList) {
+            if (myMap.has(user.gender)) {
+                myMap.set(user.gender, myMap.get(user.gender) + 1);
+            } else {
+                myMap.set(user.gender, 1);
+            }
+        }
+
+        // for each
+        myMap.forEach(function (value, key) {
+            console.log(key, value);
+        });
+
+        //console.log(myMap.delete("female"));
+        console.log(myMap.clear());
+        console.log(myMap.keys());
+        console.log(myMap.values());
+
+
+        const apple = {
+            name: "Apples"
+        };
+
+        myMap.set(apples, 1200);
+        console.log(myMap.get(apples));
+    </script>
+</body>
+
+</html>
