@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 문제
+        // 사용자가 넣은 돈은 파라미터로 받고
+        // 구매할 수 있는 음료 리스트 반환하기
+
+
+        var productList = [{
+                name: "솔의눈",
+                price: 700
+            },
+            {
+                name: "커피",
+                price: 700
+            },
+            {
+                name: "파워레이드",
+                price: 1200
+            },
+            {
+                name: "오렌지",
+                price: 1000
+            },
+            {
+                name: "보리차",
+                price: 1200
+            },
+            {
+                name: "밀키스",
+                price: 800
+            }
+        ];
+
+
+        // 방법 1.
+
+        // function getProductList(inputCoin) {
+        //     var outputList = [];
+
+        //     for (var product of productList) {
+        //         if (inputCoin >= product.price) {
+        //             outputList.push(product)
+        //         }
+        //     }
+        //     return outputList;
+        // }
+
+        // var inputCoin = 800;
+        // console.table(getProductList(inputCoin));
+
+        // let output = getProductList(800);
+        // console.table(output);
+        // console.table(getProductList(1000));
+
+
+
+        // 방법 2.
+
+        var getProductList = function (inputCoin) {
+            var outputList = [];
+
+            for (var product of productList) {
+                if (inputCoin >= product.price) {
+                    outputList.push(product);
+                }
+            }
+            return outputList;
+        };
+
+        let output = getProductList(800);
+        console.table(output);
+
+
+
+        // 참고 사항
+        // **자바스크립트에서는 function을 먼저 해석하기때문에 function은 뒤에 가도 jS가 읽고 작동함.
+        // **변수로 함수를 대체한 경우는 안됨.
+
+        // let output = getProductList(800);
+        // console.table(output);
+
+
+        // var getProductList = function (inputCoin) {
+        //     var outputList = [];
+
+        //     for (var product of productList) {
+        //         if (inputCoin >= product.price) {
+        //             outputList.push(product);
+        //         }
+        //     }
+        //     return outputList;
+        // };
+
+
+
+
+        // 방법 3.
+
+        //let getProduct = (inputCoin) => productList.filter(p => p.price <= inputCoin)
+        //console.log....?
+    </script>
+</body>
+
+</html>
