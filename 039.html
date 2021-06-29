@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Scope
+        // -선언된 변수에 대한 접근성의 의미
+
+        let carName = "기아"; // Global Scope
+
+        function myFunction() {
+            let carName = "볼보"; // Local Scope
+            console.log(carName);
+        }
+
+        // let carName = "기아"; // let으로 같은 변수명으로 선정했지만 scope이 달라서 변수선정 가능함. 
+        // console.log(carName);
+
+        myFunction();
+
+        var sum = 0;
+
+        function add(x1, x2) {
+            var sum = x1 + x2;
+            return sum;
+        }
+
+        add(5, 4);
+
+        function getDrink(inputCoin) {
+            var total = 0;
+            total += inputCoin;
+
+            return total;
+        }
+
+
+
+        console.log(getDrink(500));
+        console.log(getDrink(2000));
+        console.log(getDrink(1000));
+    </script>
+</body>
+
+</html>
