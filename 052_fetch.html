@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const url = "https://18d6197e-dd5d-4bd7-b83a-5ef0e8cf768d.mock.pstmn.io/";
+
+        // fetch
+        fetch(url + "getUserList").then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            console.log(data);
+        });
+    </script>
+</body>
+
+</html>
