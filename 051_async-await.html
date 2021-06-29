@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const url = "https://18d6197e-dd5d-4bd7-b83a-5ef0e8cf768d.mock.pstmn.io/";
+
+        // var data = axios.get(url);
+        // console.log(data);
+
+        // Async-Await
+
+        async function api(url) {
+            return (await axios.get(url)).data;
+        }
+
+        async function getData(path) {
+            var data = (await api(url + path));
+            console.log(path, data);
+        }
+
+
+        // getUserList 데이터 가져오기
+        async function getUserList() {
+            var data = (await api(url + "getUserList"));
+            console.log(data);
+        }
+
+        // getDrinkList 데이터 가져오기
+        async function getDrinkList() {
+            var data = (await api(url + "getDrinkList"));
+            console.log(data);
+        }
+
+
+        getDrinkList();
+        getUserList();
+        // getData("getUserList");
+        // getData("getDrinkList");
+    </script>
+</body>
+
+</html>
