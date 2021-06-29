@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // try-catch
+        try {
+            console.log("콘솔에 출력");
+        } catch (error) {
+            console.log(error.name);
+            console.log(error.message);
+        }
+
+
+        var x = 0;
+        var y = 3;
+
+        try {
+            if (x == 0) {
+                throw "value is zero.";
+            }
+        } catch (error) {
+            console.log(error);
+        } finally { // finally 반드시 error를 실행.
+            console.log("try/catch를 모두 실행한 후 반드시 실행하는 부분");
+        }
+    </script>
+</body>
+
+</html>
